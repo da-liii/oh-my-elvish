@@ -1,4 +1,9 @@
-# oh-my-elvish
+# Oh My Elvish
+Oh My Elvish is aimed to provide Elvish configuration with the following features:
++ User friendly
++ Productive
++ Cross Platform: GNU/Linux, Windows and macOS
+
 ## Get Elvish
 Here is the guide to install elvish and set it as your default shell:
 https://elv.sh/get/
