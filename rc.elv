@@ -1,8 +1,19 @@
-set E:PATH = /bin:/usr/bin:$E:HOME/bin
+use platform
+
+if $platform:is-windows {
+  set paths = [
+    C:\Windows\System32
+    C:\Windows\System32\WindowsPowerShell\v1.0
+    C:$E:HOMEPATH\scoop\shims
+  ] 
+} else {
+  set paths = [
+    /bin
+    /usr/bin
+    $E:HOME/bin
+  ]
+}
 use readline-binding
 
-use github.com/muesli/elvish-libs/theme/powerline
-set edit:prompt-stale-transform = {|x| put $x }
-set edit:rprompt-stale-transform = {|x| put $x }
-
 use github.com/xiaq/edit.elv/compl/git
+git:apply
