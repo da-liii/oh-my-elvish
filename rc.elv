@@ -1,11 +1,19 @@
 use platform
 
-if $platform:is-windows {
+if (eq $platform:os windows) {
   set paths = [
     C:\Windows\System32
     C:\Windows\System32\WindowsPowerShell\v1.0
     C:$E:HOMEPATH\scoop\shims
   ] 
+} elif (eq $platform:os darwin) {
+  set paths = [
+    /bin
+    /usr/bin
+    /usr/local/bin
+    /opt/homebrew/bin
+    $E:HOME/bin
+  ]
 } else {
   set paths = [
     /bin
@@ -13,6 +21,7 @@ if $platform:is-windows {
     $E:HOME/bin
   ]
 }
+
 use readline-binding
 
 use github.com/xiaq/edit.elv/compl/git
