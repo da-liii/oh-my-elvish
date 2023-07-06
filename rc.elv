@@ -17,3 +17,7 @@ use readline-binding
 
 use github.com/xiaq/edit.elv/compl/git
 git:apply
+
+if $platform:is-windows {
+  fn tig {|@a| $E:HOMEPATH\scoop\apps\git\current\usr\bin\tig $@a }
+}
