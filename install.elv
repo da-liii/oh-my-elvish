@@ -8,6 +8,6 @@ if $platform:is-windows {
   scoop install main/uutils-coreutils
 
   echo "install carapace for auto completion"
-  scoop bucket add rsteube git@github.com:rsteube/scoop-bucket.git
-  scoop install rstedube/carapace-bin
+  scoop bucket add rsteube https://github.com/rsteube/scoop-bucket.git
+  scoop install rsteube/carapace-bin
 }
