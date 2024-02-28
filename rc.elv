@@ -9,6 +9,7 @@ if (eq $platform:os windows) {
 } elif (eq $platform:os darwin) {
   set paths = [
     /opt/homebrew/opt/gnu-sed/libexec/gnubin
+    /opt/homebrew/opt/uutils-coreutils/libexec/uubin
     /bin
     /usr/bin
     /usr/local/bin
