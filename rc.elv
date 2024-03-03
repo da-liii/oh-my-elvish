@@ -32,3 +32,5 @@ if $platform:is-windows {
   fn tig {|@a| $E:HOMEPATH\scoop\apps\git\current\usr\bin\tig $@a }
 }
 
+set edit:rprompt = (constantly (styled ""))
+
