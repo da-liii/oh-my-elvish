@@ -5,6 +5,7 @@ if (eq $platform:os windows) {
     C:\Windows\System32
     C:\Windows\System32\WindowsPowerShell\v1.0
     C:$E:HOMEPATH\scoop\shims
+    C:$E:HOMEPATH\bin
   ] 
 } elif (eq $platform:os darwin) {
   set paths = [
